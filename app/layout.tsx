@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import BaseLayout from "@/components/layouts/BaseLayout";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Product Page App",
@@ -13,9 +15,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-      >
-        {children}
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@tabler/core@1.1.1/dist/css/tabler.min.css"
+        />
+      </Head>
+
+      <body>
+        <script
+          async
+          src="https://cdn.jsdelivr.net/npm/@tabler/core@1.1.1/dist/js/tabler.min.js"
+        ></script>
+        <BaseLayout>{children}</BaseLayout>
       </body>
     </html>
   );
