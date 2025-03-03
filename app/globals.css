@@ -8,9 +8,12 @@
 
 @theme {
   --color-primary: #3aa39f;
+  --color-primary-hover: #318e8b;
   --color-headers: #17183b;
   --color-french-gray: #a2a3b1;
   --color-cool-gray: #a2a3b1;
+
+  --text-base--line-height: 20px;
 }
 
 h1 {
