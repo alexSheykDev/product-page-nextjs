@@ -1,10 +1,31 @@
 @import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+/* @import "slick-carousel/slick/slick-theme.css"; */
+
+.slick-loading .slick-list {
+  background: none !important;
+}
 
 @theme {
-  --color-primary: "#3AA39F";
-  --color-headers: "#17183B";
-  --color-french-gray: "#A2A3B1";
-  --color-cool-gray: "#A2A3B1";
+  --color-primary: #3aa39f;
+  --color-headers: #17183b;
+  --color-french-gray: #a2a3b1;
+  --color-cool-gray: #a2a3b1;
+}
+
+h1 {
+  font-size: 44px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 body {
