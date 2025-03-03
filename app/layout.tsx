@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import BaseLayout from "@/components/layouts/BaseLayout";
 import Head from "next/head";
+import ClientProviders from "@/components/providers/ClientProvider";
 
 export const metadata: Metadata = {
   title: "Product Page App",
@@ -27,7 +28,9 @@ export default function RootLayout({
           async
           src="https://cdn.jsdelivr.net/npm/@tabler/core@1.1.1/dist/js/tabler.min.js"
         ></script>
-        <BaseLayout>{children}</BaseLayout>
+        <ClientProviders>
+          <BaseLayout>{children}</BaseLayout>
+        </ClientProviders>
       </body>
     </html>
   );
