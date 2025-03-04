@@ -27,7 +27,7 @@ export default function AddToCartButton({ product }: { product: IProduct }) {
   };
 
   return (
-    <div className="flex items-center gap-6 mt-6">
+    <div className="flex items-center gap-6 mt-8">
       <div className="flex items-center gap-x-10 border border-cool-gray rounded-sm p-4 h-[52px]">
         <button
           className="cursor-pointer"

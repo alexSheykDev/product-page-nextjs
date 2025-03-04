@@ -14,7 +14,7 @@ export default function ColorSelector({ colors }: ColorSelectorProps) {
   };
 
   return (
-    <div className="mt-4">
+    <div className="mt-8">
       <div className="flex gap-3">
         {colors.map((color) => (
           <button

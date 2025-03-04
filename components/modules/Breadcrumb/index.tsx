@@ -14,7 +14,7 @@ export default function Breadcrumbs({ name, category }: BreadcrumbsProps) {
     <nav className="text-sm mt-10">
       <ul className="flex gap-2 text-headers">
         <li className="opacity-40">{category}</li>
-        <li>{`/ ${name}`}</li>
+        <li className="font-semibold">{`/ ${name}`}</li>
       </ul>
     </nav>
   );
