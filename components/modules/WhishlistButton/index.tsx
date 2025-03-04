@@ -1,9 +1,13 @@
 "use client";
 
 import { useWishlist } from "@/hooks/useWishlist";
-import HeartIcon from "@/icons/HeartIcon";
+import { IconHeart, IconHeartFilled } from "@tabler/icons-react";
 
-export default function WishlistButton({ productId }: { productId: string }) {
+type WishlistButtonProps = {
+  productId: string;
+};
+
+export default function WishlistButton({ productId }: WishlistButtonProps) {
   const { wishlistItem, toggleWishlist, isAdding, isRemoving } =
     useWishlist(productId);
 
@@ -11,9 +15,14 @@ export default function WishlistButton({ productId }: { productId: string }) {
     <button
       onClick={toggleWishlist}
       disabled={isAdding || isRemoving}
-      className="mt-4 flex items-center gap-3 text-primary font-semibold cursor-pointer"
+      className="flex items-center gap-2 text-primary font-semibold cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
     >
-      <HeartIcon isFilled={wishlistItem ? true : false} />
+      {wishlistItem ? (
+        <IconHeartFilled size={24} className="text-primary" />
+      ) : (
+        <IconHeart size={24} className="text-primary" />
+      )}
+
       <span className="text-primary">
         {wishlistItem ? "Remove from Wishlist" : "Add to Wishlist"}
       </span>
