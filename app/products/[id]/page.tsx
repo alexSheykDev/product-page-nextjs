@@ -36,9 +36,11 @@ export default async function ProductDetailedPage({
           />
           <p className="mt-14 text-headers">{product.description}</p>
           <AddToCartButton product={product} />
-          <p className="mt-6 text-headers">
-            Free 3-5 day shipping • Tool-free assembly • 30-day trial
-          </p>
+          {product.free_shipping && (
+            <p className="mt-6 text-headers">
+              Free 3-5 day shipping • Tool-free assembly • 30-day trial
+            </p>
+          )}
           <div className="flex justify-between items-center mt-14">
             <WishlistButton productId={product.id} />
             <SocialLinks />

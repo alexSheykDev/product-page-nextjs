@@ -16,7 +16,7 @@ export default function CartDropdown() {
         onClick={() => setIsOpen(!isOpen)}
         className="relative p-2 cursor-pointer"
       >
-        <IconShoppingCart />
+        <IconShoppingCart color="#17183B" />
         {cartCount > 0 && (
           <span className="absolute top-0 right-0 bg-primary text-white text-xs rounded-full px-1.5">
             {cartCount}
@@ -68,7 +68,6 @@ export default function CartDropdown() {
             </ul>
           )}
 
-          {/* View Cart Button */}
           {cart.length > 0 && (
             <Button className="w-full mt-3">View Cart</Button>
           )}

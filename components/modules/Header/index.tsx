@@ -27,8 +27,8 @@ const Header = () => {
         </ul>
       </nav>
       <div className="flex items-center gap-x-6">
-        <IconMenu />
-        <IconSearch />
+        <IconMenu color="#17183B" />
+        <IconSearch color="#17183B" />
         <CartDropdown />
       </div>
     </header>
