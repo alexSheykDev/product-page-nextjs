@@ -34,7 +34,7 @@ type SocialLinksProps = {
 };
 
 export default function SocialLinks({
-  size = 16,
+  size = 20,
   color = "#17183B",
   className,
 }: SocialLinksProps) {

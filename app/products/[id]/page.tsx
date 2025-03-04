@@ -1,6 +1,7 @@
 import getProductByIdAction from "@/actions/product/getProductByIdAction";
 import AddToCartButton from "@/components/modules/AddToCartButton";
 import Breadcrumbs from "@/components/modules/Breadcrumb";
+import ColorSelector from "@/components/modules/ColorSelector";
 import ProductNumbers from "@/components/modules/Product/ProductNumbers";
 import ProductSlider from "@/components/modules/Product/ProductSlider";
 import SocialLinks from "@/components/modules/SocialLinks";
@@ -15,6 +16,10 @@ export default async function ProductDetailedPage({
 }) {
   const productId = (await params).id;
   const product = await getProductByIdAction(productId);
+
+  const colorOptions = product?.variations.find(
+    (variation) => variation.title === "color",
+  );
 
   if (!product) {
     return <div className="text-center text-headers">No product was found</div>;
@@ -35,6 +40,9 @@ export default async function ProductDetailedPage({
             reviewCount={product.review_count}
           />
           <p className="mt-14 text-headers">{product.description}</p>
+          {colorOptions?.options?.length && (
+            <ColorSelector colors={colorOptions?.options} />
+          )}
           <AddToCartButton product={product} />
           {product.free_shipping && (
             <p className="mt-6 text-headers">
